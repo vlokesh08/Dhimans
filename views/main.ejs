@@ -1,0 +1,12 @@
+<%- include('./temp/header'); %>
+<div id="container">
+    <% posts.forEach((post) => { %>
+      <div class="product">
+      <h1><%= post.title %></h1>
+      <h2>$ <%= post.price %></h2>
+      <p><%= post.content %></p>
+      </div>
+    <% }); %>
+  </div>
+
+<%- include('./temp/footer'); %>

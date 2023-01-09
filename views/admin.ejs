@@ -1,0 +1,35 @@
+<%- include('./temp/header'); %>
+<body>
+    <div class="main">
+        <h1 class='title'>Admin Panel</h1>
+        <form class="" action="/signup" method="post">
+            <div class="form-group">
+              <label for="exampleInputName" class="ltitle">Title</label>
+              <input type="text" class="form-control one" name="postTitle" placeholder="Enter title">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="exampleInputPrice"class="lprice">Price</label>
+                <input type="text" class="form-control" name="postPrice" placeholder="Enter price">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="exampleInputDescription" class="ldesc">Description</label>
+              <textarea class="form-control" name="postArea" rows="5" cols="40" placeholder="Enter your description here"></textarea>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Proceed</button>
+
+          </form>
+      <div id="container">
+          <% posts.forEach((post) => { %>
+            <div class="product">
+            <h1><%= post.title %></h1>
+            <h2>$ <%= post.price %></h2>
+            <p><%= post.content %></p>
+            <a href="/posts/<%=post.title%>"><button>Edit</button></a>
+            </div>
+          <% }); %>
+    </div>
+      </div>
+<%- include('./temp/footer'); %>

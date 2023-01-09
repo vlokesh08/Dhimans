@@ -1,0 +1,22 @@
+<%- include('./temp/header'); %>
+<div>
+    <table>
+        <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Actions</th>
+        </tr>
+        <tr>
+        <td><%= title%></td>
+        <td><input type="text" class="price-input" value="<%= price%>"></td>
+        <td><input type="text" class="description-input" value="<%= content%>"></td>
+        <td>
+            <button class="update-button">Update</button>
+            <button class="delete-button" onclick="delete posts[ind]">Delete</button>
+        </td>
+        </tr>
+        
+    </table>
+
+<%- include('./temp/footer'); %>
